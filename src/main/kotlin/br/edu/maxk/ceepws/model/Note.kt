@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue
 import javax.persistence.Id
 
 @Entity
-class Note(@Id
+data class Note(@Id
            @GeneratedValue
            @JsonProperty(value = "id", access = JsonProperty.Access.WRITE_ONLY)
            val id: Long = 0L,
