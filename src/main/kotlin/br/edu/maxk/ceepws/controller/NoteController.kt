@@ -23,7 +23,7 @@ class NoteController {
 
     @PostMapping
     fun add(@RequestBody note: Note): Note {
-        return noteRepository.save(note)
+        return noteService.add(note)
     }
 
     @PutMapping("{id}")

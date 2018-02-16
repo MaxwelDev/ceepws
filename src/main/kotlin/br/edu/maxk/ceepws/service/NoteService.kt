@@ -6,4 +6,6 @@ interface NoteService {
 
     fun list() : List<Note>
 
+    fun add(note: Note) : Note
+
 }

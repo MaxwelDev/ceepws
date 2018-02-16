@@ -14,4 +14,8 @@ class NoteServiceimpl : NoteService {
     override fun list(): List<Note> {
         return noteRepository.findAll().toList()
     }
+
+    override fun add(note: Note): Note {
+        return noteRepository.save(note)
+    }
 }
