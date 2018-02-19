@@ -18,4 +18,12 @@ class NoteServiceimpl : NoteService {
     override fun add(note: Note): Note {
         return noteRepository.save(note)
     }
+
+    override fun alter(id: Long, note: Note): Note {
+        if (noteRepository.exists(id)) {
+            val safeNote = note.copy(id = id)
+            return noteRepository.save(note)
+        }
+        return Note()
+    }
 }

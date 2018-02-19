@@ -8,4 +8,6 @@ interface NoteService {
 
     fun add(note: Note) : Note
 
+    fun alter(id: Long, note: Note) : Note
+
 }
