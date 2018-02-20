@@ -33,8 +33,6 @@ class NoteController {
 
     @DeleteMapping("{id}")
     fun delete(@PathVariable id: Long) {
-        if(noteRepository.exists(id)) {
-            noteRepository.delete(id)
-        }
+        noteService.delete(id)
     }
 }

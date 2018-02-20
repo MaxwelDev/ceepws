@@ -26,4 +26,10 @@ class NoteServiceimpl : NoteService {
         }
         return Note()
     }
+
+    override fun delete(id: Long) {
+        if(noteRepository.exists(id)) {
+            noteRepository.delete(id)
+        }
+    }
 }

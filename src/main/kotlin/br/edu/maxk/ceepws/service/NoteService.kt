@@ -10,4 +10,5 @@ interface NoteService {
 
     fun alter(id: Long, note: Note) : Note
 
+    fun delete(id: Long)
 }
